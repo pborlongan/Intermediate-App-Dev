@@ -54,3 +54,10 @@ It inherits from the DbContext class.
 - The virtual keyword allows our entity to support "lazy loading".
 - The ICollection\<T> is an interface data type.
 - The HashSet\<T> is a class that "implements" the ICollection\<T> interface.
+
+```
+        [NotMapped]
+        public string FullName
+        { get { return FirstName + " " + LastName; } }
+```
+- NotMapped properties are properties that exist on the Entity, but NOT in the Database
