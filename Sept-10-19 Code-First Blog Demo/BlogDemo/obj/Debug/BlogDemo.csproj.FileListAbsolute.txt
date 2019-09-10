@@ -1,0 +1,15 @@
+C:\Users\pborlongan1\Documents\GitHub\2018-EF-Review\src\Code-First Blog Demo\BlogDemo\bin\Debug\BlogDemo.exe.config
+C:\Users\pborlongan1\Documents\GitHub\2018-EF-Review\src\Code-First Blog Demo\BlogDemo\bin\Debug\BlogDemo.exe
+C:\Users\pborlongan1\Documents\GitHub\2018-EF-Review\src\Code-First Blog Demo\BlogDemo\bin\Debug\BlogDemo.pdb
+C:\Users\pborlongan1\Documents\GitHub\2018-EF-Review\src\Code-First Blog Demo\BlogDemo\bin\Debug\EntityFramework.dll
+C:\Users\pborlongan1\Documents\GitHub\2018-EF-Review\src\Code-First Blog Demo\BlogDemo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pborlongan1\Documents\GitHub\2018-EF-Review\src\Code-First Blog Demo\BlogDemo\bin\Debug\EntityFramework.xml
+C:\Users\pborlongan1\Documents\GitHub\2018-EF-Review\src\Code-First Blog Demo\BlogDemo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pborlongan1\Documents\GitHub\2018-EF-Review\src\Code-First Blog Demo\BlogDemo\obj\Debug\BlogDemo.csprojAssemblyReference.cache
+C:\Users\pborlongan1\Documents\GitHub\2018-EF-Review\src\Code-First Blog Demo\BlogDemo\obj\Debug\BlogDemo.csproj.CoreCompileInputs.cache
+C:\Users\pborlongan1\Documents\GitHub\2018-EF-Review\src\Code-First Blog Demo\BlogDemo\obj\Debug\BlogDemo.csproj.CopyComplete
+C:\Users\pborlongan1\Documents\GitHub\2018-EF-Review\src\Code-First Blog Demo\BlogDemo\obj\Debug\BlogDemo.exe
+C:\Users\pborlongan1\Documents\GitHub\2018-EF-Review\src\Code-First Blog Demo\BlogDemo\obj\Debug\BlogDemo.pdb
+C:\Users\pborlongan1\Documents\GitHub\2018-EF-Review\src\Code-First Blog Demo\BlogDemo\obj\Debug\BlogDemo.Migrations.InitialCreate.resources
+C:\Users\pborlongan1\Documents\GitHub\2018-EF-Review\src\Code-First Blog Demo\BlogDemo\obj\Debug\BlogDemo.csproj.GenerateResource.cache
+C:\Users\pborlongan1\Documents\GitHub\2018-EF-Review\src\Code-First Blog Demo\BlogDemo\obj\Debug\BlogDemo.Migrations.AddUrl.resources
