@@ -59,12 +59,13 @@ select new{
 
 // F) List all the region and territory names as an "object graph"
 //   - use a nested query
-from territory in Territories
+from region in Regions
 select new{
-	Territory = territory.TerritoryDescription,
-	Region = from region in Regions
-			 select region.RegionDescription
+	Region = region.RegionDescription,
+	Territory = from territories in region.Territories
+				select territories.TerritoryDescription
 }
+
 
 // G) List all the product names that contain the word "chef" in the name.
 from product in Products
