@@ -66,7 +66,6 @@ select new{
 				select territories.TerritoryDescription
 }
 
-
 // G) List all the product names that contain the word "chef" in the name.
 from product in Products
 where product.ProductName.Contains("Chef")
