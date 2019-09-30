@@ -47,3 +47,14 @@ select new{
 }
 
 // B) List all the Customers by Company Name. Include the Customer's company name, contact name, and other contact information in the result.
+from customer in Customers
+select new{
+	Customer_Company_Name = customer.CompanyName,
+	Contact_Information = from company in Customers
+						  select new
+						  {
+						  		Contact_Name = company.ContactName,
+								Contact_Title = company.ContactTitle,
+								Contact_Email = company.ContactEmail
+						  }
+}
