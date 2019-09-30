@@ -62,8 +62,8 @@ select new{
 from region in Regions
 select new{
 	Region = region.RegionDescription,
-	Territory = from territories in region.Territories
-				select territories.TerritoryDescription
+	Territory = from territory in region.Territories //access region territories
+				select territory.TerritoryDescription
 }
 
 // G) List all the product names that contain the word "chef" in the name.
