@@ -82,4 +82,4 @@ select new{
 					   select sales.OrderID).Count()
 }
 
-// E) Group all customers by city. Output the city name, aalong with the company name, contact name and title, and the phone number.
+// E) Group all customers by city. Output the city name, along with the company name, contact name and title, and the phone number.
