@@ -7,7 +7,7 @@
 
 ### October 2nd
 ---
-#### Nested Repeaters eview
+#### Nested Repeaters rseview
 ```
 <asp:Repeater ID="SupplierSummaryRepeater" runat="server" DataSourceID="SupplierSummaryDataSource" ItemType="WestWindSystem.ReadModels.SupplierSummary">
         <ItemTemplate>
