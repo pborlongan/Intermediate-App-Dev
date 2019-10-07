@@ -8,7 +8,7 @@
 ### October 2nd
 ---
 #### Nested Repeaters rseview
-```
+```csharp
 <asp:Repeater ID="SupplierSummaryRepeater" runat="server" DataSourceID="SupplierSummaryDataSource" ItemType="WestWindSystem.ReadModels.SupplierSummary">
         <ItemTemplate>
             <div>
@@ -23,7 +23,7 @@
 - we are able to use Products ```DataSource="<%# Item.Products %>"``` as our DataSource becuse we are inside a repeater where we are using SupplierSummaryDataSource: ```DataSourceID="SupplierSummaryDataSource"```  as our root DataSource.
 
 - as we can see here:
-```
+```csharp
 <asp:ObjectDataSource 
     ID="SupplierSummaryDataSource" 
     runat="server"
