@@ -28,7 +28,7 @@
     - Change the connection string name to "GroceryListDB"
     - Check Tables only when asked which database objects are needed
 2.  Add ErrorMessage to ```[Required]``` entities.
-3. Add the not mapping properties
+3. Add the not mapped properties
 
     ```csharp
         private string _FullName;
