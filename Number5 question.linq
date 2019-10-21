@@ -9,8 +9,12 @@
 
 // Select all orders a picker has done on a particular week (Sunday through Saturday). Group and sorted by picker. Sort the orders by picked date.
 // Orders.Max(x=>x.PickedDate).Value.DayOfWeek
-DateTime start = new DateTime(2018,1,7).AddDays(-14);
-DateTime end = start.AddDays(7);
+DateTime start = new DateTime(2018,1,7) // last date of a picked order, which is a sunday
+					 .AddDays(-14); // go two weeks earlier.
+DateTime end = start.AddDays(7); // end time
+
+var diff = end - start;
+diff.Dump("time between two dates");
 
 var result = from sale in Orders
 			 where sale.OrderDate >= start && sale.OrderDate < end
