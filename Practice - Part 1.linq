@@ -1,7 +1,6 @@
 <Query Kind="Expression">
   <Connection>
     <ID>a974ae53-c80a-4f65-9912-ec8d7f09a4ab</ID>
-    <Persist>true</Persist>
     <Server>.</Server>
     <Database>WestWind</Database>
   </Connection>
@@ -42,6 +41,11 @@ select new{
 	Territory_Name = territory.TerritoryDescription
 }
 
+// alternate query: less typing
+from territory in Territories
+select territory.TerritoryDescription
+
+
 // D) List all the regions and the number of territories in each region
 from region in Regions
 select new{
@@ -79,6 +83,16 @@ select new
 	Product_Name = product.ProductName,
 	Product_UnitPrice = product.UnitPrice
 }
+
+// or 
+from product in Products
+where product.Discontinued
+select new
+{
+	Product_Name = product.ProductName,
+	Product_UnitPrice = product.UnitPrice
+}
+
 
 // I) List the company names of all Suppliers in North America (Canada, USA, Mexico)
 from company in Suppliers
