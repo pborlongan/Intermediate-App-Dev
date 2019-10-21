@@ -1,7 +1,6 @@
 <Query Kind="Expression">
   <Connection>
-    <ID>b1fa7da7-6733-475c-b548-05cd8c5b4ba0</ID>
-    <Persist>true</Persist>
+    <ID>a974ae53-c80a-4f65-9912-ec8d7f09a4ab</ID>
     <Server>.</Server>
     <Database>WestWind</Database>
   </Connection>
@@ -47,18 +46,19 @@ select new{
 				 select managedTerritory.Employee.FirstName + " " + managedTerritory.Employee.LastName).Distinct()
 }
 
-// B) List all the Customers by Company Name. Include the Customer's company name, contact name, and other contact information in the result.
+// B) List all the Customers sorted by Company Name. Include the Customer's company name, contact name, and other contact information in the result.
 from customer in Customers
+orderby customer.CompanyName
 select new{
 	Customer_Company_Name = customer.CompanyName,
-	Contact_Information = from company in Customers
-						  select new
+	Contact_Information = new
 						  {
-						  		Contact_Name = company.ContactName,
-								Contact_Title = company.ContactTitle,
-								Contact_Email = company.ContactEmail
+						  	customer.ContactName,
+							customer.ContactTitle,
+							customer.ContactEmail
 						  }
 }
+
 
 // C) List all the employees and sort the result in ascending order by last name, then first name. Show the employee's first and last name separately, along with the number of customer orders they have worked on.
 from employee in Employees
@@ -69,6 +69,15 @@ select new{
 	Customer_Orders = (from sales in Orders
 					   where sales.SalesRepID == employee.EmployeeID
 					   select sales.OrderID).Count()
+}
+
+// or
+from employee in Employees
+orderby employee.LastName, employee.FirstName
+select new{
+	Employee_LastName = employee.LastName,
+	Employee_FirstName = employee.FirstName,
+	Customer_Orders = employee.SalesRepOrders.Count()
 }
 
 // D) List all the employees and sort the result in descending(?) order by last name, then first name. Show the employee's first and last name separately, along with the number of customer orders they have worked on.
@@ -83,3 +92,20 @@ select new{
 }
 
 // E) Group all customers by city. Output the city name, along with the company name, contact name and title, and the phone number.
+from buyer in Customers
+group buyer by buyer.Address.City into CityVendors
+select new{
+	City = CityVendors.Key,
+	Company = from company in CityVendors
+			  select new{
+			  	company.CompanyName,
+				company.ContactName,
+				company.ContactTitle,
+				company.Phone
+			  }
+}
+
+// F) List all the Suppliers, by Country
+from vendor in Suppliers
+group vendor by vendor.Address.Country
+// short answer
