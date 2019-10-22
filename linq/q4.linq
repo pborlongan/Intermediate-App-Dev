@@ -1,6 +1,6 @@
 <Query Kind="Expression">
   <Connection>
-    <ID>25dab0a5-613e-4076-857a-f35fe862a5a4</ID>
+    <ID>dd6fc7dd-8c72-476d-b005-327e10789d86</ID>
     <Persist>true</Persist>
     <Server>.</Server>
     <Database>GroceryList</Database>
@@ -21,6 +21,9 @@ select new
 						Product = item.Product.Description,
 						Price = item.Price,
 						PickedQty = item.QtyPicked,
-						Discount = item.Discount
+						Discount = item.Discount,
+						SubTotal = ((double)item.Product.Price * item.QtyPicked) - ((double)item.Discount),
+						Tax = item.Product.Taxable == true ? (((double)item.Product.Price * item.QtyPicked) - ((double)item.Discount)) * 0.05 : 0,
+						ExtendedPrice = item.Product.Taxable == true ? (((double)item.Product.Price * item.QtyPicked) - ((double)item.Discount)) * 1.05 : ((double)item.Product.Price * item.QtyPicked) - ((double)item.Discount)
 					}
 }

@@ -1,6 +1,6 @@
 <Query Kind="Expression">
   <Connection>
-    <ID>25dab0a5-613e-4076-857a-f35fe862a5a4</ID>
+    <ID>dd6fc7dd-8c72-476d-b005-327e10789d86</ID>
     <Persist>true</Persist>
     <Server>.</Server>
     <Database>GroceryList</Database>
@@ -16,6 +16,7 @@ select new{
 	Items = from order in customer.Orders
 			from orderList in order.OrderLists
 			group orderList by orderList.Product.Description into ItemDescription
+			orderby ItemDescription.Count() descending, ItemDescription.Key
 			select new 
 			{
 				Description = ItemDescription.Key,
