@@ -7,14 +7,6 @@
   </Connection>
 </Query>
 
-// Question 1
-from product in Products
-orderby product.OrderLists.Count() descending, product.Description ascending
-select new {
-	Product = product.Description,
-	TimesPurchased = product.OrderLists.Count()
-}
-
 // Question 2
 from order in Orders
 orderby order.Store.Location ascending // gets the store location that has customers
@@ -28,21 +20,4 @@ select new{
 				City = CustomerInformation.Key.City,
 				Province = CustomerInformation.Key.Province
 			 }
-}
-
-// Question 3
-from store in Stores
-orderby store.City ascending, store.Location ascending
-select new{
-	City = store.City,
-	Location = store.Location,
-	Sales = from sale in store.Orders
-			where sale.OrderDate.Month == 12 // specific month
-			group sale by sale.OrderDate into SalesInformation
-			select new{
-				Date = SalesInformation.Key,
-				NumberOfOrders = SalesInformation.Count(), //counts the grouping inside the group
-				ProductSales = SalesInformation.Sum(x => x.SubTotal),
-				GST = SalesInformation.Sum(x => x.GST)
-			}
 }
