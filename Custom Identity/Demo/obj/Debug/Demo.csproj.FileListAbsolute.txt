@@ -1,0 +1,12 @@
+C:\Users\pborlongan1\Documents\GitHub\Intermediate-App-Dev\Custom Identity\Demo\bin\Debug\Demo.dll.config
+C:\Users\pborlongan1\Documents\GitHub\Intermediate-App-Dev\Custom Identity\Demo\bin\Debug\Demo.dll
+C:\Users\pborlongan1\Documents\GitHub\Intermediate-App-Dev\Custom Identity\Demo\bin\Debug\Demo.pdb
+C:\Users\pborlongan1\Documents\GitHub\Intermediate-App-Dev\Custom Identity\Demo\bin\Debug\EntityFramework.dll
+C:\Users\pborlongan1\Documents\GitHub\Intermediate-App-Dev\Custom Identity\Demo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pborlongan1\Documents\GitHub\Intermediate-App-Dev\Custom Identity\Demo\bin\Debug\EntityFramework.xml
+C:\Users\pborlongan1\Documents\GitHub\Intermediate-App-Dev\Custom Identity\Demo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pborlongan1\Documents\GitHub\Intermediate-App-Dev\Custom Identity\Demo\obj\Debug\Demo.csprojAssemblyReference.cache
+C:\Users\pborlongan1\Documents\GitHub\Intermediate-App-Dev\Custom Identity\Demo\obj\Debug\Demo.csproj.CoreCompileInputs.cache
+C:\Users\pborlongan1\Documents\GitHub\Intermediate-App-Dev\Custom Identity\Demo\obj\Debug\Demo.csproj.CopyComplete
+C:\Users\pborlongan1\Documents\GitHub\Intermediate-App-Dev\Custom Identity\Demo\obj\Debug\Demo.dll
+C:\Users\pborlongan1\Documents\GitHub\Intermediate-App-Dev\Custom Identity\Demo\obj\Debug\Demo.pdb
