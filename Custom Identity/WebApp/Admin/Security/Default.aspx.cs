@@ -11,7 +11,8 @@ namespace WebApp.Admin.Security
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Request.IsAuthenticated || !User.IsInRole(Settings.AdminRole))
+                Response.Redirect("~/", true);
         }
     }
 }
