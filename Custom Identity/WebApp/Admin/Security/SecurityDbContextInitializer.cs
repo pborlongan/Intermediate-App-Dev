@@ -8,6 +8,7 @@ using System.Linq;
 
 using System.Web;
 using WebApp.Models;
+using static WebApp.Admin.Security.Settings;
 
 namespace WebApp.Admin.Security
 {
@@ -25,30 +26,30 @@ namespace WebApp.Admin.Security
             // The IdentityRole is an Entity class that represents a security role.
 
             // Hard-coded security roles (move later on)
-            roleManager.Create(new IdentityRole { Name = "Administrators" });
-            roleManager.Create(new IdentityRole { Name = "Registered Users" });
+            foreach (var role in DefaultSecurityRoles)
+                roleManager.Create(new IdentityRole { Name = role });
             #endregion
 
             #region Seed the users
             //Create user
             var adminUser = new ApplicationUser
             {
-                UserName = "WebAdmin",
-                Email = "Fake@Hackers.ru",
+                UserName = AdminUserName,
+                Email = AdminEmail,
                 EmailConfirmed = true
             };
 
             // Get the BLL user manager
             var userManager = new ApplicationUserManager(new UserStore<ApplicationUser>(context));
             // - The ApplicationUserManager is a BLL class in the IdentityConfig.cs file
-            var result = userManager.Create(adminUser, "Pa$$w0rd");
+            var result = userManager.Create(adminUser, AdminPassword);
 
             if(result.Succeeded)
             {
                 // Get the Id that was generated for the user we created/added
-                var found = userManager.FindByName("WebAdmin").Id;
+                var found = userManager.FindByName(AdminUserName).Id;
                 // Add the user to the Administrators role
-                userManager.AddToRole(found, "Administrators");
+                userManager.AddToRole(found, AdminRole);
             }
 
             // Create the other user accounts for all the poeple in my Demo database
@@ -64,11 +65,11 @@ namespace WebApp.Admin.Security
                     PersonId = person.PersonID
                 };
 
-                result = userManager.Create(user, "Pa$$w0rd1");
+                result = userManager.Create(user, TempPassword);
                 if(result.Succeeded)
                 {
-                    var userId = userManager.FindByName(user.UserName).Id;
-                    userManager.AddToRole(userId, "Registered Users");
+                    var userId = userManager.FindByName(AdminUserName).Id;
+                    userManager.AddToRole(userId, UserRole);
                 }
             }
             #endregion
