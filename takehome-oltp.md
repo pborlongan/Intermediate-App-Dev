@@ -5,4 +5,17 @@
 ---
 > Clerks will mainly interact with this page.
 
-![](/img/GroceryList.svg)
+![](img/GroceryList.svg)
+
+## Events and Interactions
+---
+
+![](img/GroceryListEvents.svg)
+
+ - ![](img/1.svg) - **Page_Load** event
+    - ![](img/A.svg) - Loads pickers into the dropdown list.
+ - ![](img/2.svg) - **CustomerOrderNumber** submit click event
+    - Once the clerk submits the customer order number, the system will load the products the customer ordered and their details ![](img/B.svg) ![](img/C.svg)
+
+## POCOs/DTOs
+---
